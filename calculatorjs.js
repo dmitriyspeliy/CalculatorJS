@@ -50,8 +50,9 @@ equals.addEventListener("click",function(){
         expressionSafe.push(display.value);
         rvtButton.disabled = false;
         display.value = eval(display.value);
-        if (display.value.indexOf(".") != '-1') {
-            display.value=display.value.substring(0, display.value.indexOf(".") + 9);//установка знаков после точки, если цифра 9, то не более 8
+        var dot = display.value.indexOf(".");
+        if (dot != '-1') {
+            display.value=display.value.substring(0, dot + 9);//установка знаков после точки, если цифра 9, то не более 8
         }
     }
 })
