@@ -50,6 +50,9 @@ equals.addEventListener("click",function(){
         expressionSafe.push(display.value);
         rvtButton.disabled = false;
         display.value = eval(display.value);
+        if (display.value.indexOf(".") != '-1') {
+            display.value=display.value.substring(0, display.value.indexOf(".") + 9);//установка знаков после точки, если цифра 9, то не более 8
+        }
     }
 })
 
@@ -165,12 +168,6 @@ allReset.addEventListener("click",function(){
     divMemory.style.display = "none";
 })
 
-function func(e) {
-    if (e.value.indexOf(".") != '-1') {
-      e.value=e.value.substring(0, e.value.indexOf(".") + 9); // цифра 4, устанавливает количество цифр после запятой, 
-        console.log("3")                             //т.е. если 4, то максимум 3 цифры после запятой
-    }
-  }
 
 
 
