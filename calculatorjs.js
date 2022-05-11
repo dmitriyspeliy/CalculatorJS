@@ -69,7 +69,7 @@ minusplus.addEventListener("click",function(){
 //очищаем массив и блокируем кнопку
 rvtButton.addEventListener("click",function(){
    display.value = expressionSafe[0];
-   expressionSafe.splice(0,expressionSafe.length)
+   expressionSafe.splice(0,expressionSafe.length);
    rvtButton.disabled = true;
 })
 
@@ -77,7 +77,7 @@ rvtButton.addEventListener("click",function(){
 //событие на нажати в поле кнопок, чтобы убрать поле памяти
 closeContainer.addEventListener("click",function(e){
     if(e.target == closeContainer){
-        divMemory.style.display = "none"
+        divMemory.style.display = "none";
     }
 })
 
@@ -95,7 +95,7 @@ memoryStoreSave.addEventListener("click",function(){
         var div = document.createElement("div");
         var button = document.createElement("button");
         button.innerText = "delete";
-        button.className = "deleteNumber"
+        button.className = "deleteNumber";
         div.className = "element";
         div.innerHTML = eval(display.value);
         div.append(button);
@@ -107,7 +107,7 @@ memoryStoreSave.addEventListener("click",function(){
 //по нажатию удаляем последний элемент
 container_memory.addEventListener("click",function(e){
     var deleteNumber = document.querySelector(".deleteNumber");
-    var element = document.querySelector(".element")
+    var element = document.querySelector(".element");
     if(e.target == deleteNumber){
         container_memory.removeChild(element);
         var myIndex = memory.indexOf(element
@@ -130,7 +130,7 @@ memoryRecall.addEventListener("click",function(){
 deleteAllfromMemory.addEventListener("click",function(){
     while (container_memory.firstChild) {
         container_memory.removeChild(container_memory.firstChild);
-        memory.splice(0,memory.length)
+        memory.splice(0,memory.length);
     }
 })
 
@@ -158,13 +158,13 @@ minusMemory.addEventListener("click",function(){
 //кнопка AC
 //Чистиим все массивы, удаляем все элементы из памяти
 allReset.addEventListener("click",function(){
-    memory.splice(0,memory.length)
-    expressionSafe.splice(0,memory.length)
+    memory.splice(0,memory.length);
+    expressionSafe.splice(0,memory.length);
     rvtButton.disabled = true;
     display.value = "0";
     while (container_memory.firstChild) {
         container_memory.removeChild(container_memory.firstChild);
-        memory.splice(0,memory.length)
+        memory.splice(0,memory.length);
     }
     divMemory.style.display = "none";
 })
