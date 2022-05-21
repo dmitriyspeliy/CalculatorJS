@@ -11,6 +11,10 @@
     <div class="main">
         <div class="calculator">
             <div class="wrapper"> 
+                <div class="rvtExpression">
+                </div>
+                <div class="preResult">
+                </div>
                 <div class="divForDisplay"><input value="0" readonly class="display"></input></div>
                 <div class="buttons">
                     <div class="column1_memory">
@@ -34,7 +38,7 @@
                         <div><button class="number" id="8">8</button></div>
                         <div><button class="number" id="5">5</button></div>
                         <div><button class="number" id="2">2</button></div>
-                        <div><button class="number" id=".">.</button></div>
+                        <div><button class="number dot" id=".">.</button></div>
                     </div>
                     <div class="column5">
                         <div><button id="allReset">AC</button></div>
@@ -45,15 +49,15 @@
                     </div>
                     <div class="column6">
                         <div><button id="cansel"><-</button></div>
-                        <div><button class="number" id="/">/</button></div>
-                        <div><button class="number" id="*">*</button></div>
-                        <div><button class="number" id="-">-</button></div>
-                        <div><button class="number" id="+">+</button></div>
+                        <div><button class="number division" id="/">/</button></div>
+                        <div><button class="number multiplication" id="*">*</button></div>
+                        <div><button class="number minus" id="-">-</button></div>
+                        <div><button class="number plus" id="+">+</button></div>
                     </div>
                     <div class="column7">
                         <div><button disabled id="rvt">Rvt</button></div>
-                        <div><button class="number" id="(">(</button></div>
-                        <div><button class="number" id=")">)</button></div>
+                        <div><button class="number openBracket" id="(">(</button></div>
+                        <div><button class="number closeBracket" id=")">)</button></div>
                         <div><button id="equals">=</button></div>
                     </div>
                 </div>

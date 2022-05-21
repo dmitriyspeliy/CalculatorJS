@@ -7,6 +7,7 @@ body{
 .calculator{
 width: 420px;
 height: 385px;
+max-width: 420px;
 
 border: 1px black solid;
 margin-top: 100px;
@@ -19,7 +20,7 @@ position: relative;
 .wrapper{
     min-height: 345px;
     min-width: 380px;
-
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -114,6 +115,13 @@ position: relative;
 .buttons div:last-child div:last-child button{
     flex: 1 1 auto;
     align-self: auto;
+    
+}
+button:disabled{
+    border: 1px solid #888686;
+  background-color: #efefef;
+  color: #666666;
+    
 }
 .memory{
     position: absolute;
@@ -130,4 +138,12 @@ position: relative;
 }
 #rvt{
     border: none;
+}
+.preResult{
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    max-width: 400px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
